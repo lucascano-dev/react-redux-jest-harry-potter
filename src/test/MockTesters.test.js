@@ -38,7 +38,7 @@ describe("Funcion: devolverElDObleDelMasAlto(Array) <= filtrarNumeroMasAlto", ()
 describe("Funcion: sumarleAlNumeroMasAlto(numero1, numero2, numero3", () => {
   test("Test1: Devuelve la suma del mayor de los dos primeros numeros mas el tercer numero", () => {
     cualEsMayor.mockReturnValueOnce(89);
-    //suma.mockReturnValueOnce(133);
+    suma.mockReturnValueOnce(133);
     let response = sumarleAlNumeroMasAlto(23, 89, 44);
     expect(response).toBe(133);
   });
@@ -48,5 +48,29 @@ describe("Funcion: sumarleAlNumeroMasAlto(numero1, numero2, numero3", () => {
     // suma.mockReturnValueOnce(133);
     let response = sumarleAlNumeroMasAlto(22, "89", 44);
     expect(response).toBe("Los parametros deben ser numeros");
+  });
+});
+
+describe("Funcion: convertirYverificarMayusculas(Texto)", () => {
+  test("Test1: Devuelve un mensaje positivo si es que todas las palabras del texto empiezan en mayúscula", () => {
+    primeraLetraMayuscula.mockReturnValueOnce("Soy Lucas Cano");
+    let response = convertirYverificarMayusculas("Soy Lucas Cano");
+    expect(response).toBe(
+      "Verificado: Todas las palabras empiezan en mayúsculas"
+    );
+  });
+
+  test("Test2: Solo puede recibir un texto", () => {
+    primeraLetraMayuscula.mockReturnValueOnce("Soy Lucas Cano");
+    let response = convertirYverificarMayusculas(24);
+    expect(response).toBe("ERROR: Solo se aceptan textos");
+  });
+
+  test("Test3: Devuelve un mensaje de error si alguna palabra no empieza con mayúsculas", () => {
+    primeraLetraMayuscula.mockReturnValueOnce("Soy lucas Cano");
+    let response = convertirYverificarMayusculas("Soy lucas Cano");
+    expect(response).toBe(
+      "ERROR: Alguna de las palabras no empieza con mayúsculas"
+    );
   });
 });
