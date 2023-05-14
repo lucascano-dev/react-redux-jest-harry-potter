@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  title: "TITULOsss",
-  subtitle: "SUBTITULO",
+  title: "Harry Potter (from Store initialState)",
+  subtitle: "Characters (from Store initialState",
   description:
-    "Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería",
+    "Harry Potter is a series of fantasy novels written by British author J.K. Rowling, which describes the adventures of the young witch apprentice Harry Potter and his friends Hermione Granger and Ron Weasley, during their years at Hogwarts School. of Magic and Sorcery",
 };
 
 export const aboutSlice = createSlice({

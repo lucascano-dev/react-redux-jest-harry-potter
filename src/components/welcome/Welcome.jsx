@@ -20,7 +20,7 @@ const Welcome = () => {
           <button>To Go About</button>
         </Link>
         <div className="users-fans">
-          <h1>Last Registered Fan</h1>
+          <h1>Last Fan messages received</h1>
           <h3>Fan: {users}</h3>
           <h3>email: {email}</h3>
           <h3>Comment: {comment}</h3>

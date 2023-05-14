@@ -27,8 +27,8 @@ const Contact = () => {
     <>
       <div className="contenedor-principal-contact">
         <div className="texto-about">
-          <h1>FORM</h1>
-          <h2>Subtitulo</h2>
+          <h1>FAN FORM</h1>
+          <h2>Leave your comment</h2>
           <div className="forms-group">
             <Form onSubmit={(event) => handleSubmit(event)}>
               <Form.Group className="mb-3" controlId="Text">
